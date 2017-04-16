@@ -1,0 +1,28 @@
+﻿@model HRSystem.ViewModels.LoginViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    @using(Html.BeginForm())
+    {
+
+        <h2>Login</h2>
+        @Html.DisplayNameFor(model => model.Username)
+        <br/>
+        @Html.TextBoxFor(model => model.Username)
+        @Html.ValidationMessageFor(model => model.Username)
+        <br/>
+        @Html.DisplayNameFor(model => model.Password)
+        <br />
+        @Html.PasswordFor(model => model.Password)
+        @Html.ValidationMessageFor(model => model.Password)
+        <br/>
+
+        @ViewBag.LoginMessage
+
+        <input type="submit" value="Submit"/>
+        @Html.ActionLink("Reset Password", "ResetPassword")
+    }
+</div>

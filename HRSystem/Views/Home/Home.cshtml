@@ -1,0 +1,23 @@
+﻿@model HRSystem.ViewModels.HomeViewModel
+@{
+    ViewBag.Title = "Home";
+}
+<div class="jumbotron">
+    <h2>Hello @Model.Username !</h2>
+
+    Welcome to your dashboard.
+    <br />
+    <br />
+    You have the following Permissions:
+    <br />
+    @Model.UserPermissions
+    <br />
+    <br />
+    Your UserType(s) are:
+
+    <br />
+    @Model.UserTypes
+    <br />
+    <br />
+
+</div>
